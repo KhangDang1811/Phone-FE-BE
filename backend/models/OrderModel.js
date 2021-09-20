@@ -12,18 +12,17 @@ const orderSchema = new mongoose.Schema({
         name: { type: String, required: true},
         qty: { type: String, required: true},
         image: { type: String, required: true},
-        salePrice: { type: Number, required: true},
+        special_price: { type: Number, required: true},
         product: {
             type: mongoose.Schema.Types.ObjectId,
             ref: 'Product'
         }
     }],
     shippingAddress: {
-        province: {type: String},
-        district: {type: String},
-        ward: {type: String},
-        detail: {type: String},
-        name: {type: String},
+        city: {type: String},
+        name:{type:String},
+        address:{type:String},
+        fullName: {type: String},
         phone: {type: String},
     },
     paymentMethod: String,
